@@ -1,5 +1,4 @@
-const API_URL = "http://localhost:5000/api";
-
+const API_URL = "https://login-project-backend-hn57.onrender.com/api";
 export const signupUser = async (email, password) => {
   const response = await fetch(`${API_URL}/auth/signup`, {
     method: "POST",
