@@ -1,4 +1,5 @@
 import { useState } from "react";
+
 import { Link, useNavigate } from "react-router-dom";
 
 import { signupUser } from "../api";
@@ -36,7 +37,7 @@ function Signup() {
 
       <div className="auth-box">
 
-        <h1>Create Account</h1>
+        <h1 className="text-blue-600 font-bold text-xl">Create Account</h1>
 
         <form onSubmit={handleSignup}>
 
@@ -56,8 +57,9 @@ function Signup() {
             required
           />
 
-          <button type="submit">
-            Signup
+          <button type="submit" className="mb-3">
+          
+  <span>SignUp</span>
           </button>
 
         </form>
@@ -66,7 +68,9 @@ function Signup() {
 
         <p>
           Already have an account?
-          <Link to="/login"> Login</Link>
+          <Link to="/login" className="bg-blue-500 ml-4 hover:bg-blue-700 text-white font-bold py-2 px-3 rounded">
+            Login
+          </Link>
         </p>
 
       </div>

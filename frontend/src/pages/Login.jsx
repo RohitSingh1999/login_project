@@ -43,7 +43,7 @@ function Login() {
 
       <div className="auth-box">
 
-        <h1>Login</h1>
+        <h1 className="text-blue-600 font-bold text-xl">Login</h1>
 
         <form onSubmit={handleLogin}>
 
@@ -63,7 +63,7 @@ function Login() {
             required
           />
 
-          <button type="submit" disabled={loading}>
+          <button type="submit" disabled={loading} className="mb-3">
             {loading ? "Logging in..." : "Login"}
           </button>
 
@@ -76,8 +76,10 @@ function Login() {
         )}
 
         <p>
-          Don't have an account?
-          <Link to="/signup"> Signup</Link>
+         <span> Don't have an account?</span>
+          <Link to="/signup" className="bg-blue-500 ml-4 hover:bg-blue-700 text-white font-bold py-2 px-3 rounded">
+            Signup
+          </Link>
         </p>
 
       </div>
